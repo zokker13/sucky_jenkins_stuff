@@ -4,9 +4,10 @@ pipeline {
   agent any
 
   stages {
-    stage('Build') {
+    stage('Build linux') {
+      agent 'linux'
       steps {
-        sh 'hola'
+        sh 'echo hola'
       }
     }
   }

@@ -1,14 +1,14 @@
 pipeline {
   agent: none
   stages {
-    state('Build') {
+    stage('Build') {
       agent any
       steps {
         checkout scm
         sh 'npm install'
       }
     }
-    state('Test on Linux') {
+    stage('Test on Linux') {
       agent {
         label 'linux'
       }
@@ -16,7 +16,7 @@ pipeline {
         sh 'npm test'
       }
     }
-    state('Test on Win') {
+    stage('Test on Win') {
       agent {
         label 'linux'
       }

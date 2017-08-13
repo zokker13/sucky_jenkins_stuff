@@ -9,7 +9,7 @@ pipeline {
         label 'win'
       }
       steps {
-        checkout scm
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gityo', url: 'https://github.com/zokker13/sucky_jenkins_stuff']]])
         bat 'npm test'
       }
     }
@@ -18,7 +18,7 @@ pipeline {
         label 'linux'
       }
       steps {
-        checkout scm
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gityo', url: 'https://github.com/zokker13/sucky_jenkins_stuff']]])
         sh 'npm test'
       }
     }

@@ -6,11 +6,11 @@ pipeline {
   stages {
     stage('Build') {
       agent {
-        label 'linux'
+        label 'win'
       }
       steps {
         checkout scm
-        sh 'npm install'
+        bat 'npm install'
       }
     }
     stage('Build linux') {

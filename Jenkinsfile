@@ -4,13 +4,13 @@ pipeline {
   agent none
 
   stages {
-    stage('Build') {
+    stage('Build Win') {
       agent {
         label 'win'
       }
       steps {
         checkout scm
-        bat 'npm install'
+        bat 'npm test'
       }
     }
     stage('Build linux') {
@@ -18,15 +18,8 @@ pipeline {
         label 'linux'
       }
       steps {
+        checkout scm
         sh 'npm test'
-      }
-    }
-    stage('Build Win') {
-      agent {
-        label 'win'
-      }
-      steps {
-        bat 'npm test'
       }
     }
   }

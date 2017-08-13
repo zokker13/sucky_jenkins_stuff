@@ -1,21 +1,13 @@
 #!/usr/bin/env groovy
 
-node {
-  stage('checkout') {
-    checkout scm
-  }
-  stage('Test on linux') {
-    agent {
-      label 'linux'
+pipeline {
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        sh 'hola'
+      }
     }
-    sh 'npm install'
-    sh 'npm test'
-  }
-  stage('Test on Windows') {
-    agent {
-      label 'win'
-    }
-    bat 'npm install'
-    bat 'npm test'
   }
 }

@@ -5,7 +5,9 @@ pipeline {
 
   stages {
     stage('Build linux') {
-      label 'linux'
+      agent {
+        label 'linux'
+      }
       steps {
         sh 'echo hola'
       }

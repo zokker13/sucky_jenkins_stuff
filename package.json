@@ -1,0 +1,20 @@
+{
+  "name": "sucky_jenkins_stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zokker13/sucky_jenkins_stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zokker13/sucky_jenkins_stuff/issues"
+  },
+  "homepage": "https://github.com/zokker13/sucky_jenkins_stuff#readme"
+}

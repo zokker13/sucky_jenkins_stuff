@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/zokker13/sucky_jenkins_stuff/issues"
   },
-  "homepage": "https://github.com/zokker13/sucky_jenkins_stuff#readme"
+  "homepage": "https://github.com/zokker13/sucky_jenkins_stuff#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
 }

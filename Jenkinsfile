@@ -5,7 +5,9 @@ pipeline {
 
   stages {
     stage('Build') {
-      agent any
+      agent {
+        label 'linux'
+      }
       steps {
         checkout scm
         sh 'npm install'
@@ -16,7 +18,15 @@ pipeline {
         label 'linux'
       }
       steps {
-        sh 'echo hola'
+        sh 'npm test'
+      }
+    }
+    stage('Build Win') {
+      agent {
+        label 'win'
+      }
+      steps {
+        bat 'npm test'
       }
     }
   }
